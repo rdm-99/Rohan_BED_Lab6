@@ -10,10 +10,11 @@
         <div class="row col-md-8 offset-md-2">
             <div class="card">
                 <div class="card-header">
-                    <h2 class="text-center">Add Student</h2>
+                    <h2 class="text-center">Edit Student</h2>
                 </div>
                 <div class="card-body">
-                    <form role="form" method="post" th:action="@{/student/save}" th:object="${student}">
+                    <form role="form" method="post" th:action="@{/student/update(studentId=${student.id})}"
+                      th:object="${student}">
                         <div class="mb-3">
                             <label for="firstName" class="form-label"> First Name </label>
                             <input type="text" id="firstName" name="firstName" class="form-control"
